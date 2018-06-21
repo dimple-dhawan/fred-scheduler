@@ -17,4 +17,6 @@ class FredSession(db.Model):
 
 @app.route("/")
 def hello():
-	return render_template('hello.html')
+    sessions = FredSession.query.all()
+    return render_template('hello.html', sessions=sessions)
+

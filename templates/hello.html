@@ -1,11 +1,10 @@
 <html>
 <head></head>
 <body>
-The Fred Scheduler !
-
-
-
-
-
+    The Fred Scheduler !
+    {% for session in sessions %}
+        {{ session.id }}
+        {{ session.dt }}
+    {% endfor %}
 </body>
 </html>
